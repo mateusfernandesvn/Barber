@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Container } from "../../components/container";
@@ -9,9 +10,18 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa6";
 
-
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,     
+      offset: 200,        
+      once: false,        
+      startEvent: 'scroll', 
+    });
+  }, []);
   return (
     <div className="bg-white text-black dark:bg-zinc-900 dark:text-gray-200">
       {/* Chamada para ação */}
@@ -39,20 +49,24 @@ export function Home() {
 
       <Container>
         {/* conteudo sobre */}
-        <section id="about" className="flex flex-col text-center py-8 ">
+        <section
+          id="about"
+          className="flex flex-col text-center py-16"
+          data-aos="fade-up"
+        >
           <h2 className="text-4xl font-black mb-4 my-4 uppercase tracking-widest max-sm:text-2xl ">
             Seu Estilo, Nossa Missãos <span className="text-red-500">.</span>
           </h2>
           <div className="flex flex-col justify-center mx-8 text-lg ">
             <p className="text-center my-6 max-sm:text-justify">
-              Na Master Barber, acreditamos que um corte de cabelo vai
-              além de um simples serviço: é uma experiência de cuidado e estilo.
-              Desde a nossa inauguração, nos dedicamos a oferecer o que há de
-              melhor no universo da barbearia, combinando tradição e tendências
-              modernas para criar um visual único e personalizado para cada
-              cliente. Com uma equipe de profissionais altamente qualificados,
-              garantimos um atendimento de excelência, em um ambiente acolhedor
-              e descontraído. Nossa missão é não apenas realçar a aparência, mas
+              Na Master Barber, acreditamos que um corte de cabelo vai além de
+              um simples serviço: é uma experiência de cuidado e estilo. Desde a
+              nossa inauguração, nos dedicamos a oferecer o que há de melhor no
+              universo da barbearia, combinando tradição e tendências modernas
+              para criar um visual único e personalizado para cada cliente. Com
+              uma equipe de profissionais altamente qualificados, garantimos um
+              atendimento de excelência, em um ambiente acolhedor e
+              descontraído. Nossa missão é não apenas realçar a aparência, mas
               também proporcionar um momento de relaxamento e bem-estar, sempre
               com um toque de sofisticação.
             </p>
@@ -65,7 +79,6 @@ export function Home() {
                 Local
               </p>
               <p className="font-semibold">Av. Dorival Caymmi, Itapuã</p>
-              
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -74,7 +87,6 @@ export function Home() {
                 Telefone
               </p>
               <p className="font-semibold ">(71) 99999-9999</p>
-             
             </div>
 
             <div className="flex flex-col items-center gap-4">
@@ -87,8 +99,13 @@ export function Home() {
             </div>
           </div>
         </section>
-        {/* conteudo serevios */}
-        <section id="services" className="flex flex-col text-center py-8">
+
+        {/* conteudo serviços */}
+        <section
+          id="services"
+          className="flex flex-col text-center py-16"
+          data-aos="fade-up"
+        >
           <h2 className="text-4xl font-black mb-4 my-4 uppercase tracking-widest max-sm:text-2xl">
             Nossos Serviços <span className="text-red-500">.</span>
           </h2>
@@ -103,7 +120,7 @@ export function Home() {
         </section>
 
         {/* conteudo tabela de valores */}
-        <section className="flex flex-col text-center py-8 ">
+        <section className="flex flex-col text-center py-16" data-aos="fade-up">
           <h2 className="text-4xl font-black mb-4 my-4 uppercase tracking-widest max-sm:text-2xl ">
             {" "}
             Tabela de valores <span className="text-red-500 ">.</span>
@@ -112,7 +129,7 @@ export function Home() {
         </section>
 
         {/* conteudo galeria */}
-        <section className="text-center py-8 ">
+        <section className="text-center py-16" data-aos="fade-up">
           <h2 className="text-4xl font-black mb-4 my-4 uppercase tracking-widest max-sm:text-2xl">
             Nossa Galeria <span className="text-red-500">.</span>
           </h2>
