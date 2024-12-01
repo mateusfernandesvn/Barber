@@ -6,23 +6,16 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { FaRegSmile } from 'react-icons/fa';
 import { SlMustache } from "react-icons/sl";
-
-import {
-  RiScissors2Line,
-  RiBrushLine,
-  RiUser3Line,
-} from "react-icons/ri";
-
+import { RiScissors2Line, RiBrushLine, RiUser3Line } from "react-icons/ri";
 
 // Função para criar os cards
 const createCard = (title: string, icon: React.ReactNode) => (
   <React.Fragment>
     <CardContent>
-      <Typography variant="h5" component="div">
+      <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>
         {title}
         {icon}
       </Typography>
-    
     </CardContent>
   </React.Fragment>
 );
@@ -30,9 +23,19 @@ const createCard = (title: string, icon: React.ReactNode) => (
 export default function OutlinedCards() {
   return (
     <Box
-      sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 4 }}
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: 4,
+        // Responsividade para telas menores
+        "@media (max-width: 768px)": {
+          gridTemplateColumns: "repeat(2, 1fr)",
+        },
+        "@media (max-width: 480px)": {
+          gridTemplateColumns: "1fr",
+        },
+      }}
     >
-     
       <Card variant="outlined">
         {createCard(
           "Corte de Cabelo",
@@ -40,15 +43,13 @@ export default function OutlinedCards() {
         )}
       </Card>
 
-     
       <Card variant="outlined">
         {createCard(
           "Barba",
-          <SlMustache  size={50} className="text-center m-auto my-4" />
+          <SlMustache size={50} className="text-center m-auto my-4" />
         )}
       </Card>
 
-      
       <Card variant="outlined">
         {createCard(
           "Combo",
@@ -56,7 +57,6 @@ export default function OutlinedCards() {
         )}
       </Card>
 
-     
       <Card variant="outlined">
         {createCard(
           "Pigmentação",
@@ -64,7 +64,6 @@ export default function OutlinedCards() {
         )}
       </Card>
 
-     
       <Card variant="outlined">
         {createCard(
           "Luzes",
@@ -72,7 +71,6 @@ export default function OutlinedCards() {
         )}
       </Card>
 
-     
       <Card variant="outlined">
         {createCard(
           "Massagem Facial",

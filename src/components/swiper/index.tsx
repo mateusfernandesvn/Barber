@@ -13,6 +13,14 @@ export function Carousel() {
       spaceBetween={20}
       keyboard={{ enabled: true }}
       navigation
+      breakpoints={{
+        320: {
+          slidesPerView: 1, 
+        },
+        768: {
+          slidesPerView: 2, 
+        },
+      }}
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>

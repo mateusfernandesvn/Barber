@@ -29,8 +29,8 @@ export function Header() {
   };
 
   return (
-    <header className="bg-gray-100 text-white w-full  ">
-      <nav className="w-full h-auto lg:h-24 flex flex-col lg:flex-row items-center justify-around py-3 mx-auto text-black dark:bg-zinc-950 dark:text-white">
+    <header className="bg-gray-100 text-white w-full">
+      <nav className="w-full max-sm:h-16 lg:h-24 flex flex-col lg:flex-row items-center justify-around py-3 mx-auto text-black dark:bg-zinc-950 dark:text-white">
         <Link
           to="/"
           className="text-red-600 uppercase font-bold text-2xl lg: mb-4 lg:mb-0"
@@ -38,7 +38,7 @@ export function Header() {
           Master Barber 
         </Link>
 
-        <div className="flex items-center gap-6 font-medium">
+        <div className="flex items-center gap-6 font-medium ">
           <Link to="/">Home</Link>
           <a href="#about">Sobre nós</a>
           <a href="#services">Serviços</a>
@@ -47,18 +47,18 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
           <a
             href="https://www.instagram.com/newstylle.barbearia/"
             target="_blank"
           >
-            <FaInstagram size={30} />
+            <FaInstagram size={26} />
           </a>
           <a
             href="https://www.instagram.com/newstylle.barbearia/"
             target="_blank"
           >
-            <FaFacebook size={30} />
+            <FaFacebook size={26} />
           </a>
           <button
             onClick={toggleDarkMode}

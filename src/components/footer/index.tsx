@@ -14,7 +14,7 @@ export function Footer() {
         >
           Master Barber
         </Link>
-        <div className="flex mt-12 mb-6 flex-col text-lg font-semibold text-black lg:flex-row justify-center gap-4 lg:gap-8 dark:text-gray-200">
+        <div className="flex mt-12 mb-6 flex-col text-lg font-semibold text-black lg:flex-row justify-center gap-4 lg:gap-6 dark:text-gray-200">
           <Link to="/">Home</Link>
           <a href="#about">Sobre nós</a>
           <a href="#services">Serviços</a>
@@ -22,7 +22,7 @@ export function Footer() {
             Agendamento
           </Link>
         </div>
-        <div className="h-0 w-1/3 flex justify-center items-center m-auto  border-2 border-gray-500"></div>
+       
 
         <div className="flex mt-8 mb-6  justify-center gap-4 ">
           <a href="">
@@ -43,10 +43,8 @@ export function Footer() {
             <FaFacebook size={30} />
           </a>
         </div>
-        <p className="max-w-2xl  text-center m-auto my-6">
-          A Master Barber tem como objetivo oferecer um atendimento de
-          excelência, com um ambiente moderno e acolhedor, onde cada corte é
-          feito com dedicação e estilo.
+        <p className="max-w-2xl text-center m-auto my-6  px-4 max-sm:text-sm">
+        A Master Barber oferece atendimento de excelência em um ambiente moderno, com cortes dedicados e cheios de estilo.
         </p>
       </div>
       <div className=" py-4 flex flex-col items-center">

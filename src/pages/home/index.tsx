@@ -16,20 +16,20 @@ import AOS from "aos";
 export function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 1200,     
-      offset: 200,        
-      once: false,        
-      startEvent: 'scroll', 
+      duration: 1200,
+      offset: 200,
+      once: false,
+      startEvent: "scroll",
     });
   }, []);
   return (
     <div className="bg-white text-black dark:bg-zinc-900 dark:text-gray-200">
       {/* Chamada para ação */}
-      <div className="relative">
+      <div className="relative w-full h-auto">
         <img
           src="/banner.webp"
           alt="Imagem da Barbearia"
-          className="w-full object-cover brightness-50  "
+          className="w-full max-sm:h-96 object-cover brightness-50  "
         />
         <div className="absolute w-full inset-0 flex flex-col items-center justify-center text-center bg-opacity-50">
           <h1 className="text-5xl font-black uppercase text-white mb-5 tracking-wider font-heading select-none max-sm:text-2xl ">
@@ -40,7 +40,7 @@ export function Home() {
           </p>
           <Link
             to="/agendamento"
-            className="w-60 py-2 bg-red-600 text-white font-bold rounded-lg text-lg uppercase  hover:bg-red-700 duration-300"
+            className="w-48 text-base md:w-60 py-2 bg-red-600 text-white font-bold rounded-lg md:text-lg uppercase  hover:bg-red-700 duration-300"
           >
             Agende agora
           </Link>
@@ -109,10 +109,9 @@ export function Home() {
           <h2 className="text-4xl font-black mb-4 my-4 uppercase tracking-widest max-sm:text-2xl">
             Nossos Serviços <span className="text-red-500">.</span>
           </h2>
-          <p className="mt-4 mx-16 text-center mb-8 max-sm:text-justify ">
-            Investimos nos melhores profissionais para lhe oferecer atendimento
-            de alta qualidade. Para você, que além do cabelo, procura por
-            serviços personalizados para barba e bigode.
+          <p className="mt-4 mx-16 text-center mb-8 ">
+            Profissionais qualificados oferecendo serviços personalizados para
+            cabelo, barba e bigode.
           </p>
           <div>
             <OutlinedCard />
